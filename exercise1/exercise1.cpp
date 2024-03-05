@@ -67,9 +67,11 @@ void sellProduct(dispenserType& productDispenser, cashRegister& cash) {
     int cashIn;
 
     if (productDispenser.getNoOfItems() > 0) {
-        cout << "Стоимость товара: " << cost << "руб. ";
-        cin >> cashIn;
 
+        cout << "Стоимость товара: " << cost << "руб. ";
+
+        cout << "Внесите сумму: ";
+        cin >> cashIn;
         if (cashIn >= cost) {
             if (balance >= cashIn - cost) {
                 productDispenser.makeSale();
